@@ -583,11 +583,17 @@ const PropertyBrief = ({ property , isOwnerOrAdmin , fetchProperty}) => {
                 {property.images.slice(1, 4).map((image, index) => (
                   <div key={index + 1} className="relative">
                     <img
-                      src={image}
-                      alt={`${property.propertyType} ${index + 2}`}
-                      className="w-full h-[70px] object-cover cursor-pointer"
-                      onClick={() => openModal(image, index + 1)}
-                      onError={handleImageError}
+                      <img
+  src={property.images && property.images.length > 0 ? property.images[0] : "/rental-placeholder.jpg"}
+  alt={property.propertyType || "Rental Property"}
+  className="w-full h-[300px] object-cover rounded-lg cursor-pointer"
+  onClick={() => openModal(property.images?.[0] || "/rental-placeholder.jpg", 0)}
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = "/rental-placeholder.jpg"; // Fallback image path
+  }}
+/>
+
                     />
                     {index === 2 && property.images.length > 4 && (
                       <div
