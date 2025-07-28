@@ -7,7 +7,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import image1 from "../../../assets/home/propertyCarousal/img1.svg";
 import image2 from "../../../assets/home/propertyCarousal/img2.svg";
 import image3 from "../../../assets/home/propertyCarousal/img3.svg";
-import image4 from "../../../assets/home/propertyCarousal/img4.svg";
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
