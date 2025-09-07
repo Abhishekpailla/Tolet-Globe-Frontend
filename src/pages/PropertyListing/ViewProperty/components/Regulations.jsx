@@ -2,7 +2,10 @@
 import React from "react";
 import { BsPeopleFill } from "react-icons/bs";
 import { MdPets } from "react-icons/md";
-import { PiStudentBold } from "react-icons/pi";
+.regulation-icon {
+  font-size: 20px; /* Increase or decrease as needed */
+}
+
 
 const Regulations = ({ selectComp, property }) => {
   const getPreferenceText = () => {
